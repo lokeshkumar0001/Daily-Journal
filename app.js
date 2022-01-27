@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //mongoose 
-mongoose.connect("mongodb+srv://admin-lokesh:"+process.env.PASS+"@cluster0.qunef.mongodb.net/postDB")
+mongoose.connect("mongodb+srv://admin-lokesh:Test123@cluster0.qunef.mongodb.net/postDB")
 
 const postSchema = new mongoose.Schema({
   title:String,
