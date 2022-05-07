@@ -16,7 +16,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //mongoose 
-mongoose.connect("mongodb+srv://admin-lokesh:Test123@cluster0.qunef.mongodb.net/postDB")
+mongoose.connect("mongodb+srv://lokesh:lokesh123@cluster0.uweyu.mongodb.net/postDB?retryWrites=true&w=majority")
+.then(()=> console.log("database connected"))
+.catch((err)=> {console.log(err);})
+
 
 const postSchema = new mongoose.Schema({
   title:String,
